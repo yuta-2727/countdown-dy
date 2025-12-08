@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Countdown – Tag 8 💚</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0f172a;
+      color: #e5e7eb;
+      padding: 20px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 480px;
+      background: rgba(15, 23, 42, 0.92);
+      border-radius: 20px;
+      padding: 28px 24px 24px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      text-align: center;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      color: #9ca3af;
+    }
+
+    .tag-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #7A8769;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: #9ca3af;
+      line-height: 1.4;
+      margin-top: 16px;
+      margin-bottom: 10px;
+    }
+
+    button.reveal-btn {
+      appearance: none;
+      border: none;
+      cursor: pointer;
+      padding: 12px 20px;
+      border-radius: 999px;
+      font-size: 15px;
+      font-weight: 600;
+      margin-top: 22px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #e5e7eb;
+      color: #020617;
+      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.2s ease;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+    }
+
+    button.reveal-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 35px rgba(0,0,0,0.5);
+      background: #ffffff;
+    }
+
+    .reveal-area {
+      display: none;
+      animation: fadeIn 0.5s ease forwards;
+      margin-top: 22px;
+    }
+
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: rgba(148, 163, 184, 0.25);
+      margin: 20px 0;
+    }
+
+    .section-title {
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      margin-bottom: 18px;
+      color: #e5e7eb;
+    }
+
+    .photo {
+      width: 100%;
+      background: #0f172a;
+      border-radius: 18px;
+      margin-bottom: 14px;
+      box-shadow: 0 16px 35px rgba(0,0,0,0.5);
+      object-fit: contain;
+      max-height: 450px;
+    }
+
+    .day-label {
+      font-size: 14px;
+      color: #9ca3af;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .day-main {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .day-sub {
+      font-size: 14px;
+      color: #cbd5f5;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <div class="tag">
+    <span class="tag-dot"></span>
+    Countdown
+  </div>
+
+  <p class="subtitle">
+    Nikah am 21.12. • Standesamt am 23.12.
+  </p>
+
+  <!-- Countdown direkt sichtbar -->
+  <div class="day-label">Heute ist der 08.12.</div>
+  <div class="day-main">Noch 13 Tage bis zu unserer Nikah 🤍</div>
+  <div class="day-sub">Und nur noch 15 Tage bis zu unserem Standesamt.</div>
+
+  <button class="reveal-btn" id="revealButton">
+    <span>✨</span>
+    <span>Hier öffnen</span>
+  </button>
+
+  <div class="reveal-area" id="revealArea">
+
+    <div class="divider"></div>
+
+    <div class="section-title">Ben seni cok seviyorum, weißt du das?</div>
+
+    <img
+      class="photo"
+      src="Tag 8.jpg"
+      alt="Unser Moment"
+    />
+
+  </div>
+</div>
+
+<script>
+  const btn = document.getElementById("revealButton");
+  const area = document.getElementById("revealArea");
+
+  btn.addEventListener("click", () => {
+    area.style.display = "block";
+    btn.style.display = "none";
+  });
+</script>
+
+</body>
+</html>
